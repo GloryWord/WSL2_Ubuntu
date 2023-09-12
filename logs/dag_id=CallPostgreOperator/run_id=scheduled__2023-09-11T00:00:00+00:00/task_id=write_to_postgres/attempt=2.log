@@ -1,0 +1,39 @@
+[2023-09-12 00:30:24,818] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.write_to_postgres scheduled__2023-09-11T00:00:00+00:00 [None]>
+[2023-09-12 00:30:24,828] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.write_to_postgres scheduled__2023-09-11T00:00:00+00:00 [None]>
+[2023-09-12 00:30:24,829] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 00:30:24,829] {taskinstance.py:1377} INFO - Starting attempt 2 of 2
+[2023-09-12 00:30:24,829] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 00:30:24,843] {taskinstance.py:1397} INFO - Executing <Task(PostgresOperator): write_to_postgres> on 2023-09-11 00:00:00+00:00
+[2023-09-12 00:30:24,848] {standard_task_runner.py:52} INFO - Started process 22788 to run task
+[2023-09-12 00:30:24,851] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'CallPostgreOperator', 'write_to_postgres', 'scheduled__2023-09-11T00:00:00+00:00', '--job-id', '918', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/CallPostgreOperator.py', '--cfg-path', '/tmp/tmpyhfvfkml', '--error-file', '/tmp/tmpktid7v5y']
+[2023-09-12 00:30:24,851] {standard_task_runner.py:80} INFO - Job 918: Subtask write_to_postgres
+[2023-09-12 00:30:24,917] {task_command.py:371} INFO - Running <TaskInstance: CallPostgreOperator.write_to_postgres scheduled__2023-09-11T00:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-12 00:30:24,981] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=CallPostgreOperator
+AIRFLOW_CTX_TASK_ID=write_to_postgres
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-11T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-11T00:00:00+00:00
+[2023-09-12 00:30:25,002] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 204, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 86, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 67, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 430, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `my_postgres` isn't defined
+[2023-09-12 00:30:25,006] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=CallPostgreOperator, task_id=write_to_postgres, execution_date=20230911T000000, start_date=20230912T003024, end_date=20230912T003025
+[2023-09-12 00:30:25,019] {standard_task_runner.py:97} ERROR - Failed to execute job 918 for task write_to_postgres (The conn_id `my_postgres` isn't defined; 22788)
+[2023-09-12 00:30:25,063] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-09-12 00:30:25,092] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-12 00:30:25,111] {dagrun.py:549} ERROR - Marking run <DagRun CallPostgreOperator @ 2023-09-11 00:00:00+00:00: scheduled__2023-09-11T00:00:00+00:00, externally triggered: False> failed
+[2023-09-12 00:30:25,111] {dagrun.py:624} INFO - DagRun Finished: dag_id=CallPostgreOperator, execution_date=2023-09-11 00:00:00+00:00, run_id=scheduled__2023-09-11T00:00:00+00:00, run_start_date=None, run_end_date=2023-09-12 00:30:25.111637+00:00, run_duration=None, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-09-11 00:00:00+00:00, data_interval_end=2023-09-11 01:00:00+00:00, dag_hash=5956cea2961d052029c26d1e08872820
+[2023-09-12 00:30:25,114] {dagrun.py:795} WARNING - Failed to record duration of <DagRun CallPostgreOperator @ 2023-09-11 00:00:00+00:00: scheduled__2023-09-11T00:00:00+00:00, externally triggered: False>: start_date is not set.

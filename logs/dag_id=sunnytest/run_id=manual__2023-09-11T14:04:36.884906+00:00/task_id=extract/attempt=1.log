@@ -1,0 +1,128 @@
+[2023-09-11 14:04:37,800] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: sunnytest.extract manual__2023-09-11T14:04:36.884906+00:00 [queued]>
+[2023-09-11 14:04:37,813] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: sunnytest.extract manual__2023-09-11T14:04:36.884906+00:00 [queued]>
+[2023-09-11 14:04:37,814] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 14:04:37,814] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 14:04:37,814] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 14:04:37,828] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): extract> on 2023-09-11 14:04:36.884906+00:00
+[2023-09-11 14:04:37,833] {standard_task_runner.py:52} INFO - Started process 7295 to run task
+[2023-09-11 14:04:37,836] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'sunnytest', 'extract', 'manual__2023-09-11T14:04:36.884906+00:00', '--job-id', '559', '--raw', '--subdir', 'DAGS_FOLDER/params_test.py', '--cfg-path', '/tmp/tmpo0nu7twi', '--error-file', '/tmp/tmpbrdln00l']
+[2023-09-11 14:04:37,836] {standard_task_runner.py:80} INFO - Job 559: Subtask extract
+[2023-09-11 14:04:37,905] {task_command.py:371} INFO - Running <TaskInstance: sunnytest.extract manual__2023-09-11T14:04:36.884906+00:00 [running]> on host b18943745c0d
+[2023-09-11 14:04:37,979] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=sunnytest
+AIRFLOW_CTX_TASK_ID=extract
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-11T14:04:36.884906+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-11T14:04:36.884906+00:00
+[2023-09-11 14:04:37,981] {logging_mixin.py:115} INFO - context의 값: {'conf': <***.configuration.AirflowConfigParser object at 0x7fea1549b810>, 'dag': <DAG: sunnytest>, 'dag_run': <DagRun sunnytest @ 2023-09-11 14:04:36.884906+00:00: manual__2023-09-11T14:04:36.884906+00:00, externally triggered: True>, 'data_interval_end': DateTime(2023, 9, 11, 14, 4, 36, 884906, tzinfo=Timezone('UTC')), 'data_interval_start': DateTime(2023, 9, 11, 14, 4, 36, 884906, tzinfo=Timezone('UTC')), 'ds': '2023-09-11', 'ds_nodash': '20230911', 'execution_date': <Proxy at 0x7fea0c714cd0 with factory functools.partial(<function lazy_mapping_from_context.<locals>._deprecated_proxy_factory at 0x7fea0c71cb90>, 'execution_date', DateTime(2023, 9, 11, 14, 4, 36, 884906, tzinfo=Timezone('UTC')))>, 'inlets': [], 'logical_date': DateTime(2023, 9, 11, 14, 4, 36, 884906, tzinfo=Timezone('UTC')), 'macros': <module '***.macros' from '/home/***/.local/lib/python3.7/site-packages/***/macros/__init__.py'>, 'next_ds': <Proxy at 0x7fea0c714c80 with factory functools.partial(<function lazy_mapping_from_context.<locals>._deprecated_proxy_factory at 0x7fea0c71cb90>, 'next_ds', '2023-09-11')>, 'next_ds_nodash': <Proxy at 0x7fea0c714d20 with factory functools.partial(<function lazy_mapping_from_context.<locals>._deprecated_proxy_factory at 0x7fea0c71cb90>, 'next_ds_nodash', '20230911')>, 'next_execution_date': <Proxy at 0x7fea0c714eb0 with factory functools.partial(<function lazy_mapping_from_context.<locals>._deprecated_proxy_factory at 0x7fea0c71cb90>, 'next_execution_date', DateTime(2023, 9, 11, 14, 4, 36, 884906, tzinfo=Timezone('UTC')))>, 'outlets': [], 'params': {'url': 'https://s3-geospatial.s3-us-west-2.amazonaws.com/name_gender.csv'}, 'prev_data_interval_start_success': DateTime(2023, 9, 11, 14, 1, 2, 532350, tzinfo=Timezone('UTC')), 'prev_data_interval_end_success': DateTime(2023, 9, 11, 14, 1, 2, 532350, tzinfo=Timezone('UTC')), 'prev_ds': <Proxy at 0x7fea0c714e10 with factory functools.partial(<function lazy_mapping_from_context.<locals>._deprecated_proxy_factory at 0x7fea0c71cb90>, 'prev_ds', '2023-09-11')>, 'prev_ds_nodash': <Proxy at 0x7fea0c74ddc0 with factory functools.partial(<function lazy_mapping_from_context.<locals>._deprecated_proxy_factory at 0x7fea0c71cb90>, 'prev_ds_nodash', '20230911')>, 'prev_execution_date': <Proxy at 0x7fea0c757460 with factory functools.partial(<function lazy_mapping_from_context.<locals>._deprecated_proxy_factory at 0x7fea0c71cb90>, 'prev_execution_date', DateTime(2023, 9, 11, 14, 4, 36, 884906, tzinfo=Timezone('UTC')))>, 'prev_execution_date_success': <Proxy at 0x7fea0c69feb0 with factory functools.partial(<function lazy_mapping_from_context.<locals>._deprecated_proxy_factory at 0x7fea0c71cb90>, 'prev_execution_date_success', DateTime(2023, 9, 11, 14, 1, 2, 532350, tzinfo=Timezone('UTC')))>, 'prev_start_date_success': DateTime(2023, 9, 11, 14, 1, 3, 183412, tzinfo=Timezone('UTC')), 'run_id': 'manual__2023-09-11T14:04:36.884906+00:00', 'task': <Task(PythonOperator): extract>, 'task_instance': <TaskInstance: sunnytest.extract manual__2023-09-11T14:04:36.884906+00:00 [running]>, 'task_instance_key_str': 'sunnytest__extract__20230911', 'test_mode': False, 'ti': <TaskInstance: sunnytest.extract manual__2023-09-11T14:04:36.884906+00:00 [running]>, 'tomorrow_ds': <Proxy at 0x7fea0c6a73c0 with factory functools.partial(<function lazy_mapping_from_context.<locals>._deprecated_proxy_factory at 0x7fea0c71cb90>, 'tomorrow_ds', '2023-09-12')>, 'tomorrow_ds_nodash': <Proxy at 0x7fea0c6a7410 with factory functools.partial(<function lazy_mapping_from_context.<locals>._deprecated_proxy_factory at 0x7fea0c71cb90>, 'tomorrow_ds_nodash', '20230912')>, 'ts': '2023-09-11T14:04:36.884906+00:00', 'ts_nodash': '20230911T140436', 'ts_nodash_with_tz': '20230911T140436.884906+0000', 'var': {'json': None, 'value': None}, 'conn': None, 'yesterday_ds': <Proxy at 0x7fea0c6a7460 with factory functools.partial(<function lazy_mapping_from_context.<locals>._deprecated_proxy_factory at 0x7fea0c71cb90>, 'yesterday_ds', '2023-09-10')>, 'yesterday_ds_nodash': <Proxy at 0x7fea0c6a74b0 with factory functools.partial(<function lazy_mapping_from_context.<locals>._deprecated_proxy_factory at 0x7fea0c71cb90>, 'yesterday_ds_nodash', '20230910')>, 'templates_dict': None}
+[2023-09-11 14:04:37,981] {logging_mixin.py:115} INFO - params의 값: {'url': 'https://s3-geospatial.s3-us-west-2.amazonaws.com/name_gender.csv'}
+[2023-09-11 14:04:37,981] {logging_mixin.py:115} INFO - url의 값: https://s3-geospatial.s3-us-west-2.amazonaws.com/name_gender.csv
+[2023-09-11 14:04:37,981] {params_test.py:21} INFO - https://s3-geospatial.s3-us-west-2.amazonaws.com/name_gender.csv
+[2023-09-11 14:04:38,726] {python.py:173} INFO - Done. Returned value was: name,gender
+Adaleigh,F
+Amryn,Unisex
+Apurva,Unisex
+Aryion,M
+Alixia,F
+Alyssarose,F
+Arvell,M
+Aibel,M
+Atiyyah,F
+Adlie,F
+Anyely,F
+Aamoni,F
+Ahman,M
+Arlane,F
+Armoney,F
+Atzhiry,F
+Antonette,F
+Akeelah,F
+Abdikadir,M
+Arinze,M
+Arshaun,M
+Alexandro,M
+Ayriauna,F
+Aqib,M
+Alleya,F
+Aavah,F
+Anesti,Unisex
+Adalaide,F
+Analena,F
+Alaeyah,F
+Albena,F
+Aimi,F
+Adwaith,M
+Arkady,M
+Astyn,Unisex
+Adelee,F
+Agata,F
+Alegna,F
+Altan,M
+Ahnaleigh,F
+Algie,Unisex
+Ashanti,F
+Aislyn,F
+Adaleine,F
+Anthnoy,M
+Algernon,M
+Aeryona,F
+Adrinne,F
+Addell,F
+Avril,F
+Ahni,F
+Aimon,M
+Adolpho,M
+Ahuva,F
+Aurielle,F
+Aveana,F
+Aliyia,F
+Alesander,M
+Adnrea,F
+Anjae,F
+Alvine,F
+Adorah,F
+Adlemi,F
+Alesi,F
+Alontae,M
+Antonny,M
+Adarah,F
+Ayreanna,F
+Antyon,M
+Andia,F
+Ashla,F
+Aspyn,F
+Antwanett,F
+Aundreia,F
+Audella,F
+Amari,Unisex
+Arsha,Unisex
+Aricella,F
+Adan,M
+Apasra,F
+Alaysha,F
+Anderson,M
+Aurelius,M
+Aerial,F
+Averleigh,F
+Aslean,F
+Arniesha,F
+Asyana,F
+Annjane,F
+Amabella,F
+Austinjohn,M
+Arloween,F
+Alula,M
+Anemone,F
+Amorina,F
+Anureet,F
+Arric,M
+Antonne,M
+Alyre,M
+Annaise,F
+
+[2023-09-11 14:04:38,755] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=sunnytest, task_id=extract, execution_date=20230911T140436, start_date=20230911T140437, end_date=20230911T140438
+[2023-09-11 14:04:38,773] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-11 14:04:38,803] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

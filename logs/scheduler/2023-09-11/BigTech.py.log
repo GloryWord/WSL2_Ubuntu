@@ -1,0 +1,11 @@
+[2023-09-11 08:04:36,846] {processor.py:153} INFO - Started process (PID=4739) to work on /opt/airflow/dags/BigTech.py
+[2023-09-11 08:04:36,847] {processor.py:641} INFO - Processing file /opt/airflow/dags/BigTech.py for tasks to queue
+[2023-09-11 08:04:36,847] {logging_mixin.py:115} INFO - [2023-09-11 08:04:36,847] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/BigTech.py
+[2023-09-11 08:04:36,864] {processor.py:651} INFO - DAG(s) dict_keys(['listing_4_15']) retrieved from /opt/airflow/dags/BigTech.py
+[2023-09-11 08:04:37,866] {logging_mixin.py:115} INFO - [2023-09-11 08:04:37,866] {manager.py:508} INFO - Created Permission View: can delete on DAG:listing_4_15
+[2023-09-11 08:04:37,887] {logging_mixin.py:115} INFO - [2023-09-11 08:04:37,887] {manager.py:508} INFO - Created Permission View: can edit on DAG:listing_4_15
+[2023-09-11 08:04:37,905] {logging_mixin.py:115} INFO - [2023-09-11 08:04:37,905] {manager.py:508} INFO - Created Permission View: can read on DAG:listing_4_15
+[2023-09-11 08:04:37,906] {logging_mixin.py:115} INFO - [2023-09-11 08:04:37,906] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-09-11 08:04:37,920] {logging_mixin.py:115} INFO - [2023-09-11 08:04:37,920] {dag.py:2439} INFO - Creating ORM DAG for listing_4_15
+[2023-09-11 08:04:37,938] {logging_mixin.py:115} INFO - [2023-09-11 08:04:37,938] {dag.py:2972} INFO - Setting next_dagrun for listing_4_15 to 2023-09-10T00:00:00+00:00, run_after=2023-09-10T01:00:00+00:00
+[2023-09-11 08:04:37,962] {processor.py:161} INFO - Processing /opt/airflow/dags/BigTech.py took 1.121 seconds

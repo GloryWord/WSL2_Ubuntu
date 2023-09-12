@@ -1,0 +1,24 @@
+[2023-09-11 08:19:02,434] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: BigTechCompanyCount.fetch_pageviews scheduled__2023-09-10T17:00:00+00:00 [queued]>
+[2023-09-11 08:19:02,454] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: BigTechCompanyCount.fetch_pageviews scheduled__2023-09-10T17:00:00+00:00 [queued]>
+[2023-09-11 08:19:02,455] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 08:19:02,455] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 08:19:02,455] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 08:19:02,484] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): fetch_pageviews> on 2023-09-10 17:00:00+00:00
+[2023-09-11 08:19:02,491] {standard_task_runner.py:52} INFO - Started process 581 to run task
+[2023-09-11 08:19:02,496] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'BigTechCompanyCount', 'fetch_pageviews', 'scheduled__2023-09-10T17:00:00+00:00', '--job-id', '260', '--raw', '--subdir', 'DAGS_FOLDER/BigTechCompanyCount.py', '--cfg-path', '/tmp/tmpplob87h0', '--error-file', '/tmp/tmp6wk62py6']
+[2023-09-11 08:19:02,497] {standard_task_runner.py:80} INFO - Job 260: Subtask fetch_pageviews
+[2023-09-11 08:19:02,607] {task_command.py:371} INFO - Running <TaskInstance: BigTechCompanyCount.fetch_pageviews scheduled__2023-09-10T17:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-11 08:19:02,752] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=BigTechCompanyCount
+AIRFLOW_CTX_TASK_ID=fetch_pageviews
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-10T17:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-10T17:00:00+00:00
+[2023-09-11 08:19:08,700] {logging_mixin.py:115} INFO - {'Amazon': '5', 'Facebook': '816', 'Microsoft': '217', 'Apple': '52', 'Google': '705'}
+[2023-09-11 08:19:08,701] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-11 08:19:08,725] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=BigTechCompanyCount, task_id=fetch_pageviews, execution_date=20230910T170000, start_date=20230911T081902, end_date=20230911T081908
+[2023-09-11 08:19:08,771] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-11 08:19:08,818] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

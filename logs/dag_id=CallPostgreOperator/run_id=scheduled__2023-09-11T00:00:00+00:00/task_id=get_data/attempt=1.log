@@ -1,0 +1,78 @@
+[2023-09-12 00:18:49,710] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.get_data scheduled__2023-09-11T00:00:00+00:00 [queued]>
+[2023-09-12 00:18:49,720] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.get_data scheduled__2023-09-11T00:00:00+00:00 [queued]>
+[2023-09-12 00:18:49,720] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 00:18:49,720] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-12 00:18:49,720] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 00:18:49,736] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-11 00:00:00+00:00
+[2023-09-12 00:18:49,740] {standard_task_runner.py:52} INFO - Started process 22239 to run task
+[2023-09-12 00:18:49,744] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'CallPostgreOperator', 'get_data', 'scheduled__2023-09-11T00:00:00+00:00', '--job-id', '910', '--raw', '--subdir', 'DAGS_FOLDER/CallPostgreOperator.py', '--cfg-path', '/tmp/tmp7f6c9sr2', '--error-file', '/tmp/tmptrds08h9']
+[2023-09-12 00:18:49,745] {standard_task_runner.py:80} INFO - Job 910: Subtask get_data
+[2023-09-12 00:18:49,812] {task_command.py:371} INFO - Running <TaskInstance: CallPostgreOperator.get_data scheduled__2023-09-11T00:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-12 00:18:49,848] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-09-12 00:18:49,892] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=CallPostgreOperator
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-11T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-11T00:00:00+00:00
+[2023-09-12 00:19:00,563] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-12 00:19:00,585] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=CallPostgreOperator, task_id=get_data, execution_date=20230911T000000, start_date=20230912T001849, end_date=20230912T001900
+[2023-09-12 00:19:00,629] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-12 00:19:00,665] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-09-12 00:19:33,133] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.get_data scheduled__2023-09-11T00:00:00+00:00 [queued]>
+[2023-09-12 00:19:33,145] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.get_data scheduled__2023-09-11T00:00:00+00:00 [queued]>
+[2023-09-12 00:19:33,145] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 00:19:33,145] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-12 00:19:33,145] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 00:19:33,163] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-11 00:00:00+00:00
+[2023-09-12 00:19:33,169] {standard_task_runner.py:52} INFO - Started process 22283 to run task
+[2023-09-12 00:19:33,173] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'CallPostgreOperator', 'get_data', 'scheduled__2023-09-11T00:00:00+00:00', '--job-id', '913', '--raw', '--subdir', 'DAGS_FOLDER/CallPostgreOperator.py', '--cfg-path', '/tmp/tmpx5de25gx', '--error-file', '/tmp/tmp60c3yh24']
+[2023-09-12 00:19:33,173] {standard_task_runner.py:80} INFO - Job 913: Subtask get_data
+[2023-09-12 00:19:33,242] {task_command.py:371} INFO - Running <TaskInstance: CallPostgreOperator.get_data scheduled__2023-09-11T00:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-12 00:19:33,277] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-09-12 00:19:33,319] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=CallPostgreOperator
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-11T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-11T00:00:00+00:00
+[2023-09-12 00:19:44,770] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-12 00:19:44,788] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=CallPostgreOperator, task_id=get_data, execution_date=20230911T000000, start_date=20230912T001933, end_date=20230912T001944
+[2023-09-12 00:19:44,817] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-12 00:19:44,872] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-09-12 04:39:56,854] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.get_data scheduled__2023-09-11T00:00:00+00:00 [queued]>
+[2023-09-12 04:39:56,865] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.get_data scheduled__2023-09-11T00:00:00+00:00 [queued]>
+[2023-09-12 04:39:56,865] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 04:39:56,865] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-12 04:39:56,865] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 04:39:56,881] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-11 00:00:00+00:00
+[2023-09-12 04:39:56,885] {standard_task_runner.py:52} INFO - Started process 428 to run task
+[2023-09-12 04:39:56,888] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'CallPostgreOperator', 'get_data', 'scheduled__2023-09-11T00:00:00+00:00', '--job-id', '948', '--raw', '--subdir', 'DAGS_FOLDER/CallPostgreOperator.py', '--cfg-path', '/tmp/tmpprjv6mbk', '--error-file', '/tmp/tmpy2ffir9o']
+[2023-09-12 04:39:56,888] {standard_task_runner.py:80} INFO - Job 948: Subtask get_data
+[2023-09-12 04:39:56,955] {task_command.py:371} INFO - Running <TaskInstance: CallPostgreOperator.get_data scheduled__2023-09-11T00:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-12 04:39:56,990] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-09-12 04:39:57,030] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=CallPostgreOperator
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-11T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-11T00:00:00+00:00
+[2023-09-12 04:42:53,596] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-12 04:42:53,612] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=CallPostgreOperator, task_id=get_data, execution_date=20230911T000000, start_date=20230912T043956, end_date=20230912T044253
+[2023-09-12 04:42:53,657] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-12 04:42:53,691] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

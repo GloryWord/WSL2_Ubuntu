@@ -1,0 +1,34 @@
+[2023-09-09 15:33:59,661] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.get_pictures scheduled__2023-08-30T00:00:00+00:00 [queued]>
+[2023-09-09 15:33:59,706] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.get_pictures scheduled__2023-08-30T00:00:00+00:00 [queued]>
+[2023-09-09 15:33:59,707] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-09 15:33:59,707] {taskinstance.py:1377} INFO - Starting attempt 2 of 2
+[2023-09-09 15:33:59,707] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-09 15:33:59,753] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_pictures> on 2023-08-30 00:00:00+00:00
+[2023-09-09 15:33:59,760] {standard_task_runner.py:52} INFO - Started process 19376 to run task
+[2023-09-09 15:33:59,781] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'download_rocket_launches', 'get_pictures', 'scheduled__2023-08-30T00:00:00+00:00', '--job-id', '75', '--raw', '--subdir', 'DAGS_FOLDER/download_rocket_launches.py', '--cfg-path', '/tmp/tmp0isr1hzk', '--error-file', '/tmp/tmpoqidry0e']
+[2023-09-09 15:33:59,782] {standard_task_runner.py:80} INFO - Job 75: Subtask get_pictures
+[2023-09-09 15:34:00,007] {task_command.py:371} INFO - Running <TaskInstance: download_rocket_launches.get_pictures scheduled__2023-08-30T00:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-09 15:34:00,272] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=download_rocket_launches
+AIRFLOW_CTX_TASK_ID=get_pictures
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-30T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-08-30T00:00:00+00:00
+[2023-09-09 15:34:00,280] {logging_mixin.py:115} INFO - Absolute path of /tmp/images: /tmp/images
+[2023-09-09 15:34:02,022] {logging_mixin.py:115} INFO - Downloaded https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launch_images/falcon2520925_image_20230522085927.png to /tmp/images/falcon2520925_image_20230522085927.png
+[2023-09-09 15:34:03,669] {logging_mixin.py:115} INFO - Downloaded https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launcher_images/long_march_6a_image_20221109174525.png to /tmp/images/long_march_6a_image_20221109174525.png
+[2023-09-09 15:34:05,281] {logging_mixin.py:115} INFO - Downloaded https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launch_images/atlas2520v252_image_20230829061528.jpeg to /tmp/images/atlas2520v252_image_20230829061528.jpeg
+[2023-09-09 15:34:06,676] {logging_mixin.py:115} INFO - Downloaded https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launch_images/falcon2520925_image_20230710071854.png to /tmp/images/falcon2520925_image_20230710071854.png
+[2023-09-09 15:34:08,287] {logging_mixin.py:115} INFO - Downloaded https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launch_images/falcon2520925_image_20230522090549.png to /tmp/images/falcon2520925_image_20230522090549.png
+[2023-09-09 15:34:09,677] {logging_mixin.py:115} INFO - Downloaded https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launcher_images/soyuz_2.1a_image_20230805184309.jpg to /tmp/images/soyuz_2.1a_image_20230805184309.jpg
+[2023-09-09 15:34:11,329] {logging_mixin.py:115} INFO - Downloaded https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launcher_images/electron_image_20190705175640.jpeg to /tmp/images/electron_image_20190705175640.jpeg
+[2023-09-09 15:34:12,441] {logging_mixin.py:115} INFO - Downloaded https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launcher_images/long_march_4c_image_20230801172338.jpeg to /tmp/images/long_march_4c_image_20230801172338.jpeg
+[2023-09-09 15:34:13,605] {logging_mixin.py:115} INFO - Downloaded https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launcher_images/starship_image_20230523063525.jpeg to /tmp/images/starship_image_20230523063525.jpeg
+[2023-09-09 15:34:15,129] {logging_mixin.py:115} INFO - Downloaded https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/launch_images/falcon2520925_image_20230710073235.png to /tmp/images/falcon2520925_image_20230710073235.png
+[2023-09-09 15:34:15,129] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-09 15:34:15,162] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=download_rocket_launches, task_id=get_pictures, execution_date=20230830T000000, start_date=20230909T153359, end_date=20230909T153415
+[2023-09-09 15:34:15,231] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-09 15:34:15,276] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

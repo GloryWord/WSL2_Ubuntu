@@ -1,0 +1,27 @@
+[2023-09-12 00:18:29,380] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.extract_gz manual__2023-09-12T00:18:15.369394+00:00 [queued]>
+[2023-09-12 00:18:29,393] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.extract_gz manual__2023-09-12T00:18:15.369394+00:00 [queued]>
+[2023-09-12 00:18:29,393] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 00:18:29,393] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-12 00:18:29,393] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 00:18:29,409] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): extract_gz> on 2023-09-12 00:18:15.369394+00:00
+[2023-09-12 00:18:29,415] {standard_task_runner.py:52} INFO - Started process 22214 to run task
+[2023-09-12 00:18:29,418] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'CallPostgreOperator', 'extract_gz', 'manual__2023-09-12T00:18:15.369394+00:00', '--job-id', '907', '--raw', '--subdir', 'DAGS_FOLDER/CallPostgreOperator.py', '--cfg-path', '/tmp/tmpjs1hvcz0', '--error-file', '/tmp/tmpvhcc3yon']
+[2023-09-12 00:18:29,419] {standard_task_runner.py:80} INFO - Job 907: Subtask extract_gz
+[2023-09-12 00:18:29,484] {task_command.py:371} INFO - Running <TaskInstance: CallPostgreOperator.extract_gz manual__2023-09-12T00:18:15.369394+00:00 [running]> on host b18943745c0d
+[2023-09-12 00:18:29,555] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=CallPostgreOperator
+AIRFLOW_CTX_TASK_ID=extract_gz
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-12T00:18:15.369394+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-12T00:18:15.369394+00:00
+[2023-09-12 00:18:29,556] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-09-12 00:18:29,557] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'gunzip --force /tmp/wikipageviews.gz']
+[2023-09-12 00:18:29,568] {subprocess.py:85} INFO - Output:
+[2023-09-12 00:18:30,487] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-09-12 00:18:30,517] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=CallPostgreOperator, task_id=extract_gz, execution_date=20230912T001815, start_date=20230912T001829, end_date=20230912T001830
+[2023-09-12 00:18:30,558] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-12 00:18:30,600] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

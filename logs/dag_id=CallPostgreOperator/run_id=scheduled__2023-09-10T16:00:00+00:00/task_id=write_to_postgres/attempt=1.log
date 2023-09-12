@@ -1,0 +1,36 @@
+[2023-09-11 16:46:51,950] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.write_to_postgres scheduled__2023-09-10T16:00:00+00:00 [queued]>
+[2023-09-11 16:46:51,961] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.write_to_postgres scheduled__2023-09-10T16:00:00+00:00 [queued]>
+[2023-09-11 16:46:51,961] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 16:46:51,961] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 16:46:51,961] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 16:46:51,976] {taskinstance.py:1397} INFO - Executing <Task(PostgresOperator): write_to_postgres> on 2023-09-10 16:00:00+00:00
+[2023-09-11 16:46:51,981] {standard_task_runner.py:52} INFO - Started process 15578 to run task
+[2023-09-11 16:46:51,985] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'CallPostgreOperator', 'write_to_postgres', 'scheduled__2023-09-10T16:00:00+00:00', '--job-id', '851', '--raw', '--subdir', 'DAGS_FOLDER/CallPostgreOperator.py', '--cfg-path', '/tmp/tmplhroljxi', '--error-file', '/tmp/tmp0qr76amc']
+[2023-09-11 16:46:51,985] {standard_task_runner.py:80} INFO - Job 851: Subtask write_to_postgres
+[2023-09-11 16:46:52,052] {task_command.py:371} INFO - Running <TaskInstance: CallPostgreOperator.write_to_postgres scheduled__2023-09-10T16:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-11 16:46:52,159] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=CallPostgreOperator
+AIRFLOW_CTX_TASK_ID=write_to_postgres
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-10T16:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-10T16:00:00+00:00
+[2023-09-11 16:46:52,180] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 204, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 86, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 67, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 430, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `my_postgres` isn't defined
+[2023-09-11 16:46:52,183] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=CallPostgreOperator, task_id=write_to_postgres, execution_date=20230910T160000, start_date=20230911T164651, end_date=20230911T164652
+[2023-09-11 16:46:52,194] {standard_task_runner.py:97} ERROR - Failed to execute job 851 for task write_to_postgres (The conn_id `my_postgres` isn't defined; 15578)
+[2023-09-11 16:46:52,237] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-09-11 16:46:52,268] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

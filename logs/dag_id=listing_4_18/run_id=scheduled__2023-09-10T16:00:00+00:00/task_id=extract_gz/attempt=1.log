@@ -1,0 +1,35 @@
+[2023-09-11 11:56:19,065] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: listing_4_18.extract_gz scheduled__2023-09-10T16:00:00+00:00 [queued]>
+[2023-09-11 11:56:19,081] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: listing_4_18.extract_gz scheduled__2023-09-10T16:00:00+00:00 [queued]>
+[2023-09-11 11:56:19,081] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 11:56:19,081] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 11:56:19,081] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 11:56:19,103] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): extract_gz> on 2023-09-10 16:00:00+00:00
+[2023-09-11 11:56:19,111] {standard_task_runner.py:52} INFO - Started process 910 to run task
+[2023-09-11 11:56:19,115] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'listing_4_18', 'extract_gz', 'scheduled__2023-09-10T16:00:00+00:00', '--job-id', '424', '--raw', '--subdir', 'DAGS_FOLDER/listing_4_18.py', '--cfg-path', '/tmp/tmpb16jzv76', '--error-file', '/tmp/tmppvgufsbz']
+[2023-09-11 11:56:19,115] {standard_task_runner.py:80} INFO - Job 424: Subtask extract_gz
+[2023-09-11 11:56:19,224] {task_command.py:371} INFO - Running <TaskInstance: listing_4_18.extract_gz scheduled__2023-09-10T16:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-11 11:56:19,351] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=listing_4_18
+AIRFLOW_CTX_TASK_ID=extract_gz
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-10T16:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-10T16:00:00+00:00
+[2023-09-11 11:56:19,353] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-09-11 11:56:19,353] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'gunzip --force /tmp/wikipageviews.gz']
+[2023-09-11 11:56:19,368] {subprocess.py:85} INFO - Output:
+[2023-09-11 11:56:20,662] {subprocess.py:92} INFO - 
+[2023-09-11 11:56:20,662] {subprocess.py:92} INFO - gzip: /tmp/wikipageviews.gz: invalid compressed data--format violated
+[2023-09-11 11:56:20,693] {subprocess.py:96} INFO - Command exited with return code 1
+[2023-09-11 11:56:20,729] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-09-11 11:56:20,734] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=listing_4_18, task_id=extract_gz, execution_date=20230910T160000, start_date=20230911T115619, end_date=20230911T115620
+[2023-09-11 11:56:20,754] {standard_task_runner.py:97} ERROR - Failed to execute job 424 for task extract_gz (Bash command failed. The command returned a non-zero exit code 1.; 910)
+[2023-09-11 11:56:20,816] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-09-11 11:56:20,885] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

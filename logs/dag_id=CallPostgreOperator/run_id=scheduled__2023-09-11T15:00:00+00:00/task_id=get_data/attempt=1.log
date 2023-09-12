@@ -1,0 +1,27 @@
+[2023-09-12 05:02:42,194] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.get_data scheduled__2023-09-11T15:00:00+00:00 [queued]>
+[2023-09-12 05:02:42,204] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: CallPostgreOperator.get_data scheduled__2023-09-11T15:00:00+00:00 [queued]>
+[2023-09-12 05:02:42,204] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 05:02:42,204] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-12 05:02:42,204] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 05:02:42,220] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-11 15:00:00+00:00
+[2023-09-12 05:02:42,224] {standard_task_runner.py:52} INFO - Started process 1640 to run task
+[2023-09-12 05:02:42,227] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'CallPostgreOperator', 'get_data', 'scheduled__2023-09-11T15:00:00+00:00', '--job-id', '1012', '--raw', '--subdir', 'DAGS_FOLDER/CallPostgreOperator.py', '--cfg-path', '/tmp/tmpvx58mlc4', '--error-file', '/tmp/tmpta5hbx9v']
+[2023-09-12 05:02:42,228] {standard_task_runner.py:80} INFO - Job 1012: Subtask get_data
+[2023-09-12 05:02:42,296] {task_command.py:371} INFO - Running <TaskInstance: CallPostgreOperator.get_data scheduled__2023-09-11T15:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-12 05:02:42,331] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-09-12 05:02:42,370] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=CallPostgreOperator
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-11T15:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-11T15:00:00+00:00
+[2023-09-12 05:02:42,371] {logging_mixin.py:115} INFO - 현재 전달된 url은 https://dumps.wikimedia.org/other/pageviews/2022/2022-09/pageviews-20220911-150000.gz 이다.
+[2023-09-12 05:02:59,753] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-12 05:02:59,768] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=CallPostgreOperator, task_id=get_data, execution_date=20230911T150000, start_date=20230912T050242, end_date=20230912T050259
+[2023-09-12 05:02:59,818] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-12 05:02:59,855] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

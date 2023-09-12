@@ -1,0 +1,61 @@
+[2023-09-09 15:38:10,055] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.get_pictures manual__2023-09-09T15:37:58.138229+00:00 [queued]>
+[2023-09-09 15:38:10,066] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.get_pictures manual__2023-09-09T15:37:58.138229+00:00 [queued]>
+[2023-09-09 15:38:10,066] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-09 15:38:10,066] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-09 15:38:10,066] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-09 15:38:10,080] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_pictures> on 2023-09-09 15:37:58.138229+00:00
+[2023-09-09 15:38:10,084] {standard_task_runner.py:52} INFO - Started process 19708 to run task
+[2023-09-09 15:38:10,087] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'download_rocket_launches', 'get_pictures', 'manual__2023-09-09T15:37:58.138229+00:00', '--job-id', '110', '--raw', '--subdir', 'DAGS_FOLDER/download_rocket_launches.py', '--cfg-path', '/tmp/tmps0yfhfor', '--error-file', '/tmp/tmpy2vjw6d8']
+[2023-09-09 15:38:10,087] {standard_task_runner.py:80} INFO - Job 110: Subtask get_pictures
+[2023-09-09 15:38:10,147] {task_command.py:371} INFO - Running <TaskInstance: download_rocket_launches.get_pictures manual__2023-09-09T15:37:58.138229+00:00 [running]> on host b18943745c0d
+[2023-09-09 15:38:10,212] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=download_rocket_launches
+AIRFLOW_CTX_TASK_ID=get_pictures
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-09T15:37:58.138229+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-09T15:37:58.138229+00:00
+[2023-09-09 15:38:10,216] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/pathlib.py", line 1273, in mkdir
+    self._accessor.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/gloryword/airflow/tmp/images'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/pathlib.py", line 1273, in mkdir
+    self._accessor.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/gloryword/airflow/tmp'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/pathlib.py", line 1273, in mkdir
+    self._accessor.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/gloryword/airflow'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/download_rocket_launches.py", line 28, in _get_pictures
+    pathlib.Path("/home/gloryword/airflow/tmp/images").mkdir(parents=True, exist_ok=True) # parents=True : 중간 경로들 없으면 알아서 생성, exist_ok=True : 이미 존재해도 에러발생 X
+  File "/usr/local/lib/python3.7/pathlib.py", line 1277, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/local/lib/python3.7/pathlib.py", line 1277, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/local/lib/python3.7/pathlib.py", line 1277, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/local/lib/python3.7/pathlib.py", line 1273, in mkdir
+    self._accessor.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/home/gloryword'
+[2023-09-09 15:38:10,229] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=download_rocket_launches, task_id=get_pictures, execution_date=20230909T153758, start_date=20230909T153810, end_date=20230909T153810
+[2023-09-09 15:38:10,243] {standard_task_runner.py:97} ERROR - Failed to execute job 110 for task get_pictures ([Errno 13] Permission denied: '/home/gloryword'; 19708)
+[2023-09-09 15:38:10,259] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-09-09 15:38:10,298] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,127 @@
+[2023-09-11 14:01:03,396] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: sunnytest.extract manual__2023-09-11T14:01:02.532350+00:00 [queued]>
+[2023-09-11 14:01:03,409] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: sunnytest.extract manual__2023-09-11T14:01:02.532350+00:00 [queued]>
+[2023-09-11 14:01:03,409] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 14:01:03,409] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 14:01:03,409] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 14:01:03,424] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): extract> on 2023-09-11 14:01:02.532350+00:00
+[2023-09-11 14:01:03,429] {standard_task_runner.py:52} INFO - Started process 7122 to run task
+[2023-09-11 14:01:03,432] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'sunnytest', 'extract', 'manual__2023-09-11T14:01:02.532350+00:00', '--job-id', '558', '--raw', '--subdir', 'DAGS_FOLDER/params_test.py', '--cfg-path', '/tmp/tmpf3082mol', '--error-file', '/tmp/tmp5mslne84']
+[2023-09-11 14:01:03,432] {standard_task_runner.py:80} INFO - Job 558: Subtask extract
+[2023-09-11 14:01:03,497] {task_command.py:371} INFO - Running <TaskInstance: sunnytest.extract manual__2023-09-11T14:01:02.532350+00:00 [running]> on host b18943745c0d
+[2023-09-11 14:01:03,577] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=sunnytest
+AIRFLOW_CTX_TASK_ID=extract
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-11T14:01:02.532350+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-11T14:01:02.532350+00:00
+[2023-09-11 14:01:03,578] {logging_mixin.py:115} INFO - params의 값: {'url': 'https://s3-geospatial.s3-us-west-2.amazonaws.com/name_gender.csv'}
+[2023-09-11 14:01:03,578] {logging_mixin.py:115} INFO - url의 값: https://s3-geospatial.s3-us-west-2.amazonaws.com/name_gender.csv
+[2023-09-11 14:01:03,578] {params_test.py:20} INFO - https://s3-geospatial.s3-us-west-2.amazonaws.com/name_gender.csv
+[2023-09-11 14:01:04,247] {python.py:173} INFO - Done. Returned value was: name,gender
+Adaleigh,F
+Amryn,Unisex
+Apurva,Unisex
+Aryion,M
+Alixia,F
+Alyssarose,F
+Arvell,M
+Aibel,M
+Atiyyah,F
+Adlie,F
+Anyely,F
+Aamoni,F
+Ahman,M
+Arlane,F
+Armoney,F
+Atzhiry,F
+Antonette,F
+Akeelah,F
+Abdikadir,M
+Arinze,M
+Arshaun,M
+Alexandro,M
+Ayriauna,F
+Aqib,M
+Alleya,F
+Aavah,F
+Anesti,Unisex
+Adalaide,F
+Analena,F
+Alaeyah,F
+Albena,F
+Aimi,F
+Adwaith,M
+Arkady,M
+Astyn,Unisex
+Adelee,F
+Agata,F
+Alegna,F
+Altan,M
+Ahnaleigh,F
+Algie,Unisex
+Ashanti,F
+Aislyn,F
+Adaleine,F
+Anthnoy,M
+Algernon,M
+Aeryona,F
+Adrinne,F
+Addell,F
+Avril,F
+Ahni,F
+Aimon,M
+Adolpho,M
+Ahuva,F
+Aurielle,F
+Aveana,F
+Aliyia,F
+Alesander,M
+Adnrea,F
+Anjae,F
+Alvine,F
+Adorah,F
+Adlemi,F
+Alesi,F
+Alontae,M
+Antonny,M
+Adarah,F
+Ayreanna,F
+Antyon,M
+Andia,F
+Ashla,F
+Aspyn,F
+Antwanett,F
+Aundreia,F
+Audella,F
+Amari,Unisex
+Arsha,Unisex
+Aricella,F
+Adan,M
+Apasra,F
+Alaysha,F
+Anderson,M
+Aurelius,M
+Aerial,F
+Averleigh,F
+Aslean,F
+Arniesha,F
+Asyana,F
+Annjane,F
+Amabella,F
+Austinjohn,M
+Arloween,F
+Alula,M
+Anemone,F
+Amorina,F
+Anureet,F
+Arric,M
+Antonne,M
+Alyre,M
+Annaise,F
+
+[2023-09-11 14:01:04,339] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=sunnytest, task_id=extract, execution_date=20230911T140102, start_date=20230911T140103, end_date=20230911T140104
+[2023-09-11 14:01:04,408] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-11 14:01:04,484] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

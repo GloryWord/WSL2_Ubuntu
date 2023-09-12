@@ -1,0 +1,53 @@
+[2023-09-11 14:54:31,395] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: params_test_with_wikimedia.get_data manual__2023-09-11T14:54:30.090259+00:00 [queued]>
+[2023-09-11 14:54:31,407] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: params_test_with_wikimedia.get_data manual__2023-09-11T14:54:30.090259+00:00 [queued]>
+[2023-09-11 14:54:31,407] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 14:54:31,407] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 14:54:31,407] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 14:54:31,422] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-11 14:54:30.090259+00:00
+[2023-09-11 14:54:31,426] {standard_task_runner.py:52} INFO - Started process 9812 to run task
+[2023-09-11 14:54:31,429] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'params_test_with_wikimedia', 'get_data', 'manual__2023-09-11T14:54:30.090259+00:00', '--job-id', '634', '--raw', '--subdir', 'DAGS_FOLDER/params_test_with_wikimedia.py', '--cfg-path', '/tmp/tmpi6ok0_18', '--error-file', '/tmp/tmpwow81wy5']
+[2023-09-11 14:54:31,429] {standard_task_runner.py:80} INFO - Job 634: Subtask get_data
+[2023-09-11 14:54:31,490] {task_command.py:371} INFO - Running <TaskInstance: params_test_with_wikimedia.get_data manual__2023-09-11T14:54:30.090259+00:00 [running]> on host b18943745c0d
+[2023-09-11 14:54:31,525] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-09-11 14:54:31,525] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1471, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1575, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2232, in render_templates
+    rendered_task = self.task.render_template_fields(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1188, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 347, in _do_render_template_fields
+    seen_oids,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 403, in render_template
+    return {key: self.render_template(value, context, jinja_env) for key, value in value.items()}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 403, in <dictcomp>
+    return {key: self.render_template(value, context, jinja_env) for key, value in value.items()}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 390, in render_template
+    return render_template_to_string(template, context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/helpers.py", line 296, in render_template_to_string
+    return render_template(template, context, native=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/helpers.py", line 291, in render_template
+    return "".join(nodes)
+  File "<template>", line 13, in root
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/sandbox.py", line 391, in call
+    if not __self.is_safe_callable(__obj):
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/sandbox.py", line 275, in is_safe_callable
+    getattr(obj, "unsafe_callable", False) or getattr(obj, "alters_data", False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/runtime.py", line 859, in __getattr__
+    return self._fail_with_undefined_error()
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/runtime.py", line 852, in _fail_with_undefined_error
+    raise self._undefined_exception(self._undefined_message)
+jinja2.exceptions.UndefinedError: 'ds_add' is undefined
+[2023-09-11 14:54:31,535] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=params_test_with_wikimedia, task_id=get_data, execution_date=20230911T145430, start_date=20230911T145431, end_date=20230911T145431
+[2023-09-11 14:54:31,546] {standard_task_runner.py:97} ERROR - Failed to execute job 634 for task get_data ('ds_add' is undefined; 9812)
+[2023-09-11 14:54:31,561] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-09-11 14:54:31,590] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

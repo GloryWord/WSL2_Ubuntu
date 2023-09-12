@@ -1,0 +1,24 @@
+[2023-09-11 14:36:17,268] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: params_test_with_wikimedia.get_data manual__2023-09-11T14:36:16.442437+00:00 [queued]>
+[2023-09-11 14:36:17,281] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: params_test_with_wikimedia.get_data manual__2023-09-11T14:36:16.442437+00:00 [queued]>
+[2023-09-11 14:36:17,281] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 14:36:17,281] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 14:36:17,281] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 14:36:17,295] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-11 14:36:16.442437+00:00
+[2023-09-11 14:36:17,300] {standard_task_runner.py:52} INFO - Started process 8933 to run task
+[2023-09-11 14:36:17,303] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'params_test_with_wikimedia', 'get_data', 'manual__2023-09-11T14:36:16.442437+00:00', '--job-id', '625', '--raw', '--subdir', 'DAGS_FOLDER/params_test_with_wikimedia.py', '--cfg-path', '/tmp/tmpw2etatfo', '--error-file', '/tmp/tmpckjlljt8']
+[2023-09-11 14:36:17,304] {standard_task_runner.py:80} INFO - Job 625: Subtask get_data
+[2023-09-11 14:36:17,366] {task_command.py:371} INFO - Running <TaskInstance: params_test_with_wikimedia.get_data manual__2023-09-11T14:36:16.442437+00:00 [running]> on host b18943745c0d
+[2023-09-11 14:36:17,440] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=params_test_with_wikimedia
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-11T14:36:16.442437+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-11T14:36:16.442437+00:00
+[2023-09-11 14:36:17,441] {logging_mixin.py:115} INFO - 현재 전달된 url은 https://dumps.wikimedia.org/other/pageviews/one_year_ago.year/one_year_ago.year-one_year_ago_month/pageviews-one_year_ago.yearone_year_ago_monthone_year_ago_day-one_year_ago_hour0000.gz 이다.
+[2023-09-11 14:36:17,441] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-11 14:36:17,454] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=params_test_with_wikimedia, task_id=get_data, execution_date=20230911T143616, start_date=20230911T143617, end_date=20230911T143617
+[2023-09-11 14:36:17,475] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-11 14:36:17,505] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

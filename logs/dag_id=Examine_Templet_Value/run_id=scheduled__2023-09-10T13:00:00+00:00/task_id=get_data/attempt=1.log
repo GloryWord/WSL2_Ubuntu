@@ -1,0 +1,52 @@
+[2023-09-11 06:30:43,705] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-10T13:00:00+00:00 [queued]>
+[2023-09-11 06:30:43,744] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-10T13:00:00+00:00 [queued]>
+[2023-09-11 06:30:43,744] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 06:30:43,744] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 06:30:43,744] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 06:30:43,800] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-10 13:00:00+00:00
+[2023-09-11 06:30:43,811] {standard_task_runner.py:52} INFO - Started process 138 to run task
+[2023-09-11 06:30:43,826] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Examine_Templet_Value', 'get_data', 'scheduled__2023-09-10T13:00:00+00:00', '--job-id', '153', '--raw', '--subdir', 'DAGS_FOLDER/Examine_Templet_Value.py', '--cfg-path', '/tmp/tmpq_vcmjhc', '--error-file', '/tmp/tmptlhqfefb']
+[2023-09-11 06:30:43,827] {standard_task_runner.py:80} INFO - Job 153: Subtask get_data
+[2023-09-11 06:30:44,069] {task_command.py:371} INFO - Running <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-10T13:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-11 06:30:44,206] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-09-11 06:30:44,380] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Examine_Templet_Value
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-10T13:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-10T13:00:00+00:00
+[2023-09-11 06:30:58,811] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-11 06:30:58,969] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Examine_Templet_Value, task_id=get_data, execution_date=20230910T130000, start_date=20230911T063043, end_date=20230911T063058
+[2023-09-11 06:30:59,065] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-11 06:30:59,163] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-11 06:48:44,712] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-10T13:00:00+00:00 [queued]>
+[2023-09-11 06:48:44,931] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-10T13:00:00+00:00 [queued]>
+[2023-09-11 06:48:44,954] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 06:48:44,955] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 06:48:44,955] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 06:48:45,194] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-10 13:00:00+00:00
+[2023-09-11 06:48:45,216] {standard_task_runner.py:52} INFO - Started process 957 to run task
+[2023-09-11 06:48:45,262] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Examine_Templet_Value', 'get_data', 'scheduled__2023-09-10T13:00:00+00:00', '--job-id', '185', '--raw', '--subdir', 'DAGS_FOLDER/Examine_Templet_Value.py', '--cfg-path', '/tmp/tmpzox84tzc', '--error-file', '/tmp/tmpn0f_bevy']
+[2023-09-11 06:48:45,277] {standard_task_runner.py:80} INFO - Job 185: Subtask get_data
+[2023-09-11 06:48:46,446] {task_command.py:371} INFO - Running <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-10T13:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-11 06:48:46,755] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-09-11 06:48:46,972] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Examine_Templet_Value
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-10T13:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-10T13:00:00+00:00
+[2023-09-11 06:49:09,459] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-11 06:49:09,498] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Examine_Templet_Value, task_id=get_data, execution_date=20230910T130000, start_date=20230911T064844, end_date=20230911T064909
+[2023-09-11 06:49:09,678] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-11 06:49:09,770] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

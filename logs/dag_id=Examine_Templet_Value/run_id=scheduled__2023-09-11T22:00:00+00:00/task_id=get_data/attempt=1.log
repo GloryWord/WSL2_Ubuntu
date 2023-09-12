@@ -1,0 +1,27 @@
+[2023-09-11 23:00:01,200] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-11T22:00:00+00:00 [queued]>
+[2023-09-11 23:00:01,212] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-11T22:00:00+00:00 [queued]>
+[2023-09-11 23:00:01,213] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 23:00:01,213] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 23:00:01,213] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 23:00:01,229] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-11 22:00:00+00:00
+[2023-09-11 23:00:01,233] {standard_task_runner.py:52} INFO - Started process 18456 to run task
+[2023-09-11 23:00:01,237] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Examine_Templet_Value', 'get_data', 'scheduled__2023-09-11T22:00:00+00:00', '--job-id', '889', '--raw', '--subdir', 'DAGS_FOLDER/Examine_Templet_Value.py', '--cfg-path', '/tmp/tmpit8ito3b', '--error-file', '/tmp/tmpzl4whrdv']
+[2023-09-11 23:00:01,237] {standard_task_runner.py:80} INFO - Job 889: Subtask get_data
+[2023-09-11 23:00:01,299] {task_command.py:371} INFO - Running <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-11T22:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-11 23:00:01,346] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-09-11 23:00:01,390] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Examine_Templet_Value
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-11T22:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-11T22:00:00+00:00
+[2023-09-11 23:00:01,393] {logging_mixin.py:115} INFO - 현재 전달된 url은 https://dumps.wikimedia.org/other/pageviews/2022/2022-09/pageviews-20220911-220000.gz 이다.
+[2023-09-11 23:00:18,856] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-11 23:00:18,882] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Examine_Templet_Value, task_id=get_data, execution_date=20230911T220000, start_date=20230911T230001, end_date=20230911T230018
+[2023-09-11 23:00:18,904] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-11 23:00:18,934] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

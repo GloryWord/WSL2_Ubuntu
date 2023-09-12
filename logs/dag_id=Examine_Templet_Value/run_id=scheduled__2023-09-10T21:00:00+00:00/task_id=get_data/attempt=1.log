@@ -1,0 +1,75 @@
+[2023-09-11 06:30:53,749] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-10T21:00:00+00:00 [queued]>
+[2023-09-11 06:30:53,957] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-10T21:00:00+00:00 [queued]>
+[2023-09-11 06:30:53,976] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 06:30:53,978] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 06:30:53,979] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 06:30:54,162] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-10 21:00:00+00:00
+[2023-09-11 06:30:54,236] {standard_task_runner.py:52} INFO - Started process 161 to run task
+[2023-09-11 06:30:54,279] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Examine_Templet_Value', 'get_data', 'scheduled__2023-09-10T21:00:00+00:00', '--job-id', '161', '--raw', '--subdir', 'DAGS_FOLDER/Examine_Templet_Value.py', '--cfg-path', '/tmp/tmp3_jfkl7w', '--error-file', '/tmp/tmp1am5bqx7']
+[2023-09-11 06:30:54,281] {standard_task_runner.py:80} INFO - Job 161: Subtask get_data
+[2023-09-11 06:30:54,764] {task_command.py:371} INFO - Running <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-10T21:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-11 06:30:55,150] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-09-11 06:30:55,403] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Examine_Templet_Value
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-10T21:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-10T21:00:00+00:00
+[2023-09-11 06:30:56,231] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Examine_Templet_Value.py", line 19, in _get_data
+    request.urlretrieve(url, output_path)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "/usr/local/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Temporarily Unavailable
+[2023-09-11 06:30:56,301] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=Examine_Templet_Value, task_id=get_data, execution_date=20230910T210000, start_date=20230911T063053, end_date=20230911T063056
+[2023-09-11 06:30:56,511] {standard_task_runner.py:97} ERROR - Failed to execute job 161 for task get_data (HTTP Error 503: Service Temporarily Unavailable; 161)
+[2023-09-11 06:30:56,569] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-09-11 06:30:56,827] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-11 06:49:00,387] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-10T21:00:00+00:00 [queued]>
+[2023-09-11 06:49:00,461] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-10T21:00:00+00:00 [queued]>
+[2023-09-11 06:49:00,461] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 06:49:00,461] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 06:49:00,461] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 06:49:00,525] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-10 21:00:00+00:00
+[2023-09-11 06:49:00,539] {standard_task_runner.py:52} INFO - Started process 981 to run task
+[2023-09-11 06:49:00,556] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Examine_Templet_Value', 'get_data', 'scheduled__2023-09-10T21:00:00+00:00', '--job-id', '193', '--raw', '--subdir', 'DAGS_FOLDER/Examine_Templet_Value.py', '--cfg-path', '/tmp/tmp4scw0rul', '--error-file', '/tmp/tmpj8n097mf']
+[2023-09-11 06:49:00,557] {standard_task_runner.py:80} INFO - Job 193: Subtask get_data
+[2023-09-11 06:49:00,843] {task_command.py:371} INFO - Running <TaskInstance: Examine_Templet_Value.get_data scheduled__2023-09-10T21:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-11 06:49:00,988] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-09-11 06:49:01,113] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Examine_Templet_Value
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-10T21:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-10T21:00:00+00:00
+[2023-09-11 06:49:15,832] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-11 06:49:15,886] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=Examine_Templet_Value, task_id=get_data, execution_date=20230910T210000, start_date=20230911T064900, end_date=20230911T064915
+[2023-09-11 06:49:16,001] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-11 06:49:16,124] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

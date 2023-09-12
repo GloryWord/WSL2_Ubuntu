@@ -1,0 +1,49 @@
+[2023-09-11 12:01:55,641] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: listing_4_15.get_data scheduled__2023-09-11T11:00:00+00:00 [queued]>
+[2023-09-11 12:01:55,652] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: listing_4_15.get_data scheduled__2023-09-11T11:00:00+00:00 [queued]>
+[2023-09-11 12:01:55,652] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 12:01:55,652] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 12:01:55,652] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 12:01:55,676] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-11 11:00:00+00:00
+[2023-09-11 12:01:55,682] {standard_task_runner.py:52} INFO - Started process 1415 to run task
+[2023-09-11 12:01:55,688] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'listing_4_15', 'get_data', 'scheduled__2023-09-11T11:00:00+00:00', '--job-id', '529', '--raw', '--subdir', 'DAGS_FOLDER/listing_4_15.py', '--cfg-path', '/tmp/tmpwoi6v149', '--error-file', '/tmp/tmphsv_8p8y']
+[2023-09-11 12:01:55,689] {standard_task_runner.py:80} INFO - Job 529: Subtask get_data
+[2023-09-11 12:01:55,773] {task_command.py:371} INFO - Running <TaskInstance: listing_4_15.get_data scheduled__2023-09-11T11:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-11 12:01:55,813] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-09-11 12:01:55,875] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=listing_4_15
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-11T11:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-11T11:00:00+00:00
+[2023-09-11 12:01:56,494] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/listing_4_15.py", line 21, in _get_data
+    request.urlretrieve(url, output_path)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "/usr/local/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+[2023-09-11 12:01:56,511] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=listing_4_15, task_id=get_data, execution_date=20230911T110000, start_date=20230911T120155, end_date=20230911T120156
+[2023-09-11 12:01:56,529] {standard_task_runner.py:97} ERROR - Failed to execute job 529 for task get_data (HTTP Error 404: Not Found; 1415)
+[2023-09-11 12:01:56,541] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-09-11 12:01:56,601] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

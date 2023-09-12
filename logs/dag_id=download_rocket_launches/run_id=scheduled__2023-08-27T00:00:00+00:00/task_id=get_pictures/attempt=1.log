@@ -1,0 +1,40 @@
+[2023-09-09 12:02:53,294] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.get_pictures scheduled__2023-08-27T00:00:00+00:00 [queued]>
+[2023-09-09 12:02:53,324] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.get_pictures scheduled__2023-08-27T00:00:00+00:00 [queued]>
+[2023-09-09 12:02:53,325] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-09 12:02:53,325] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-09 12:02:53,325] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-09 12:02:53,376] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_pictures> on 2023-08-27 00:00:00+00:00
+[2023-09-09 12:02:53,382] {standard_task_runner.py:52} INFO - Started process 9145 to run task
+[2023-09-09 12:02:53,390] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'download_rocket_launches', 'get_pictures', 'scheduled__2023-08-27T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/download_rocket_launches.py', '--cfg-path', '/tmp/tmpvlkd23sc', '--error-file', '/tmp/tmp9t4tlz1s']
+[2023-09-09 12:02:53,390] {standard_task_runner.py:80} INFO - Job 19: Subtask get_pictures
+[2023-09-09 12:02:53,684] {task_command.py:371} INFO - Running <TaskInstance: download_rocket_launches.get_pictures scheduled__2023-08-27T00:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-09 12:02:53,876] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=download_rocket_launches
+AIRFLOW_CTX_TASK_ID=get_pictures
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-27T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-08-27T00:00:00+00:00
+[2023-09-09 12:02:53,884] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/download_rocket_launches.py", line 31, in _get_pictures
+    launches = json.load(f)
+  File "/usr/local/lib/python3.7/json/__init__.py", line 296, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/usr/local/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 4016 (char 4015)
+[2023-09-09 12:02:53,938] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=download_rocket_launches, task_id=get_pictures, execution_date=20230827T000000, start_date=20230909T120253, end_date=20230909T120253
+[2023-09-09 12:02:54,052] {standard_task_runner.py:97} ERROR - Failed to execute job 19 for task get_pictures (Unterminated string starting at: line 1 column 4016 (char 4015); 9145)
+[2023-09-09 12:02:54,105] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-09-09 12:02:54,384] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,27 @@
+[2023-09-11 08:25:52,430] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: BigTechCompanyCount.extract_gz scheduled__2023-09-11T07:00:00+00:00 [queued]>
+[2023-09-11 08:25:52,464] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: BigTechCompanyCount.extract_gz scheduled__2023-09-11T07:00:00+00:00 [queued]>
+[2023-09-11 08:25:52,465] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 08:25:52,465] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 08:25:52,465] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 08:25:52,514] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): extract_gz> on 2023-09-11 07:00:00+00:00
+[2023-09-11 08:25:52,525] {standard_task_runner.py:52} INFO - Started process 960 to run task
+[2023-09-11 08:25:52,533] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'BigTechCompanyCount', 'extract_gz', 'scheduled__2023-09-11T07:00:00+00:00', '--job-id', '301', '--raw', '--subdir', 'DAGS_FOLDER/BigTechCompanyCount.py', '--cfg-path', '/tmp/tmpmcd7fu5k', '--error-file', '/tmp/tmpiifilkph']
+[2023-09-11 08:25:52,534] {standard_task_runner.py:80} INFO - Job 301: Subtask extract_gz
+[2023-09-11 08:25:52,740] {task_command.py:371} INFO - Running <TaskInstance: BigTechCompanyCount.extract_gz scheduled__2023-09-11T07:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-11 08:25:53,007] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=BigTechCompanyCount
+AIRFLOW_CTX_TASK_ID=extract_gz
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-11T07:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-11T07:00:00+00:00
+[2023-09-11 08:25:53,009] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-09-11 08:25:53,011] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'gunzip --force /tmp/wikipageviews.gz']
+[2023-09-11 08:25:53,034] {subprocess.py:85} INFO - Output:
+[2023-09-11 08:25:56,535] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-09-11 08:25:56,617] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=BigTechCompanyCount, task_id=extract_gz, execution_date=20230911T070000, start_date=20230911T082552, end_date=20230911T082556
+[2023-09-11 08:25:56,701] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-11 08:25:56,851] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

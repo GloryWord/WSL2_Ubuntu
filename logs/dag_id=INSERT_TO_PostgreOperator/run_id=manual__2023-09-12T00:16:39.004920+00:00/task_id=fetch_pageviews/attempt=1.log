@@ -1,0 +1,26 @@
+[2023-09-12 00:16:54,268] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: INSERT_TO_PostgreOperator.fetch_pageviews manual__2023-09-12T00:16:39.004920+00:00 [queued]>
+[2023-09-12 00:16:54,277] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: INSERT_TO_PostgreOperator.fetch_pageviews manual__2023-09-12T00:16:39.004920+00:00 [queued]>
+[2023-09-12 00:16:54,278] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 00:16:54,278] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-12 00:16:54,278] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-12 00:16:54,292] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): fetch_pageviews> on 2023-09-12 00:16:39.004920+00:00
+[2023-09-12 00:16:54,297] {standard_task_runner.py:52} INFO - Started process 22133 to run task
+[2023-09-12 00:16:54,300] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'INSERT_TO_PostgreOperator', 'fetch_pageviews', 'manual__2023-09-12T00:16:39.004920+00:00', '--job-id', '903', '--raw', '--subdir', 'DAGS_FOLDER/INSERT_TO_PostgreOperator.py', '--cfg-path', '/tmp/tmpk7jfwfzk', '--error-file', '/tmp/tmpwathnox9']
+[2023-09-12 00:16:54,300] {standard_task_runner.py:80} INFO - Job 903: Subtask fetch_pageviews
+[2023-09-12 00:16:54,362] {task_command.py:371} INFO - Running <TaskInstance: INSERT_TO_PostgreOperator.fetch_pageviews manual__2023-09-12T00:16:39.004920+00:00 [running]> on host b18943745c0d
+[2023-09-12 00:16:54,434] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=INSERT_TO_PostgreOperator
+AIRFLOW_CTX_TASK_ID=fetch_pageviews
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-12T00:16:39.004920+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-09-12T00:16:39.004920+00:00
+[2023-09-12 00:16:56,665] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:290: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-09-12 00:16:56,666] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-12 00:16:56,682] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=INSERT_TO_PostgreOperator, task_id=fetch_pageviews, execution_date=20230912T001639, start_date=20230912T001654, end_date=20230912T001656
+[2023-09-12 00:16:56,724] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-12 00:16:56,770] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,74 @@
+[2023-09-11 22:10:13,714] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: INSERT_TO_PostgreOperator.get_data scheduled__2023-09-11T16:00:00+00:00 [queued]>
+[2023-09-11 22:10:13,745] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: INSERT_TO_PostgreOperator.get_data scheduled__2023-09-11T16:00:00+00:00 [queued]>
+[2023-09-11 22:10:13,745] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 22:10:13,746] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-11 22:10:13,746] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-11 22:10:13,878] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2023-09-11 16:00:00+00:00
+[2023-09-11 22:10:13,893] {standard_task_runner.py:52} INFO - Started process 16022 to run task
+[2023-09-11 22:10:13,920] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'INSERT_TO_PostgreOperator', 'get_data', 'scheduled__2023-09-11T16:00:00+00:00', '--job-id', '862', '--raw', '--subdir', 'DAGS_FOLDER/INSERT_TO_PostgreOperator.py', '--cfg-path', '/tmp/tmpwsui5tnw', '--error-file', '/tmp/tmp3jbqnes0']
+[2023-09-11 22:10:13,921] {standard_task_runner.py:80} INFO - Job 862: Subtask get_data
+[2023-09-11 22:10:14,359] {task_command.py:371} INFO - Running <TaskInstance: INSERT_TO_PostgreOperator.get_data scheduled__2023-09-11T16:00:00+00:00 [running]> on host b18943745c0d
+[2023-09-11 22:10:14,539] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-09-11 22:10:14,769] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=INSERT_TO_PostgreOperator
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-11T16:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-11T16:00:00+00:00
+[2023-09-11 22:10:22,814] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/urllib/request.py", line 1350, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.7/http/client.py", line 1443, in connect
+    super().connect()
+  File "/usr/local/lib/python3.7/http/client.py", line 948, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/INSERT_TO_PostgreOperator.py", line 21, in _get_data
+    request.urlretrieve(url, output_path)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "/usr/local/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 1393, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 1352, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+[2023-09-11 22:10:23,081] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=INSERT_TO_PostgreOperator, task_id=get_data, execution_date=20230911T160000, start_date=20230911T221013, end_date=20230911T221023
+[2023-09-11 22:10:23,940] {standard_task_runner.py:97} ERROR - Failed to execute job 862 for task get_data (<urlopen error [Errno -3] Temporary failure in name resolution>; 16022)
+[2023-09-11 22:10:24,053] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-09-11 22:10:24,629] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
